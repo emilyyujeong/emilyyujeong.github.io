@@ -8,7 +8,6 @@
 
 .inner>* {
     flex: 1;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,125 +19,10 @@
     margin: 0 auto;
 }
 
-.slogan {
-    font-family: 'Montserrat';
-}
-
-
-.sty {
-    font-weight: 800;
-    color: #fff;
-    font-size: 150px;
-    opacity: 0;
-    transform: translate(-300px, 0);
-
-    text-shadow: -1px 0px #000, 0px 1px #000, 1px 0px #000, 0px -1px #000;
-}
-
-
-.bold {
-    font-weight: 700;
-    margin-top: -50px;
-    font-size: 100px;
-    opacity: 0;
-    transform: translate(300px, 0);
-}
-
-
-.section.on .sty {
-    transform: translate(0, 0);
-    opacity: 1;
-    transition: 1s 1s;
-}
-
-.section.on .bold {
-    transform: translate(0, 0);
-    opacity: 1;
-    transition: 1s 2s;
-}
-
-
-
-
-.circle {
-    position: absolute;
-    top: 100px;
-    right: 100px;
-    width: 200px;
-    height: 200px;
-    background: url(../images/circletypo.png) no-repeat;
-    animation: turn 5s linear infinite;
-    opacity: 0;
-}
-
-.section.on .circle {
-    opacity: 1;
-    transition: 1s 3s;
-}
-
-@keyframes turn {
-    0% {
-        transform: rotate(0deg)
-    }
-
-    50% {
-        transform: rotate(180deg)
-    }
-
-    100% {
-        transform: rotate(360deg)
-    }
-}
-
-
-
-.section .content {
-    background: tomato;
-    opacity: 0;
-    transform: translate(-300px, 0);
-    height: 400px;
-    overflow: hidden;
-    align-items: start;
-}
-
-.section .content .case {
-    transform: translate(0, 0);
-    transition: 2s;
-}
-
-.section .content:hover .case {
-    transform: translate(0, calc(-100% + 400px));
-}
-
-
-.section .description {
-    background: tan;
-    opacity: 0;
-    transform: translate(300px, 0);
-
-}
-
-.section.on .content {
-    transform: translate(0, 0);
-    opacity: 1;
-    transition: 1s 1s;
-}
-
-.section.on .description {
-    transform: translate(0, 0);
-    opacity: 1;
-    transition: 1s 2s;
-}
-
 .header {
     position: fixed;
     inset: 50px auto auto 50px;
     z-index: 999;
-}
-
-
-.header.on {
-    color: #fff;
 }
 
 
@@ -176,7 +60,7 @@
     inset: 50% 0 auto auto;
     width: 30px;
     height: 1px;
-    background: #333;
+    background: #000;
     transition: 0.5s;
 }
 
@@ -190,30 +74,253 @@
 .cover {
     position: fixed;
     inset: 0 0 0 0;
-    background: #333;
-    color: #fff;
+    background: #ffffff2c;
+    backdrop-filter: blur(10px);
+    color: #000;
     z-index: 998;
+
+
+    line-height: 60px;
+    font-size: 30px;
+    font-weight: 500;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    height: 0;
+    opacity: 0;
     overflow: hidden;
     transition: 1s;
 }
 
-
-
 .cover.on {
-    height: 100vh;
+    opacity: 1;
 }
 
-.toTop {
+
+
+
+.sty {
+    font-weight: 800;
+    color: #fff;
+    font-size: 125px;
+    opacity: 0;
+    transform: translate(-300px, 0);
+    text-shadow: -1px 0px #000, 0px 1px #000, 1px 0px #000, 0px -1px #000;
+}
+
+
+.bold {
+    font-weight: 800;
+    margin-top: -50px;
+    margin-left: 50px;
+    font-size: 120px;
+    opacity: 0;
+    transform: translate(300px, 0);
+}
+
+
+.section.on .sty {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: 1s 1s;
+}
+
+.section.on .bold {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: 1s 2s;
+}
+
+
+
+
+.circle {
+    position: absolute;
+    top: 100px;
+    right: 200px;
+    width: 200px;
+    height: 200px;
+    background: url(../images/circletypo.png) no-repeat;
+    animation: turn 5s linear infinite;
+    opacity: 0;
+}
+
+.section.on .circle {
+    opacity: 1;
+    transition: 1s 3s;
+}
+
+@keyframes turn {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    50% {
+        transform: rotate(180deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+
+
+.section .content {
+    opacity: 0;
+    transform: translate(-300px, 0);
+    height: 400px;
+    overflow: hidden;
+    align-items: start;
+}
+
+
+.section.on .content {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: 1s 1s;
+}
+
+
+.section .content .case {
+    transform: translate(0, 0);
+    transition: 2s;
+}
+
+
+.section .content:hover .case {
+    transform: translate(0, calc(-100% + 400px));
+}
+
+
+.section .description {
+    display: block;
+    opacity: 0;
+    transform: translate(300px, 0);
+    align-items: start;
+    line-height: 30px;
+
+}
+
+
+.section.on .description {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: 1s 2s;
+}
+
+
+.section .description strong {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.section .description h2 {
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.section .description h2::after {
+    display: block;
+    content: "";
+    height: 1px;
+    width: 600px;
+    background: #000;
+    margin: 20px 0;
+    transition: 1s 0.3s;
+}
+
+
+.section .description span {
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+
+
+.section .description .txt_row {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.8;
+}
+
+.section .description .txt_row dl,
+.section .description .txt_row dd {
+    width: 500px;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.section .description .txt_row dt {
+    float: left;
+    width: 70px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.section .description .txt_row span {
+    font-size: 20px;
+    font-weight: 300;
+
+}
+
+.section .description .txt_row .color {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 2px 0 0 0;
+}
+
+.section .description .txt_row .c01 {
+    background: #000;
+}
+
+.section .description .txt_row .c02 {
+    background: #444;
+}
+
+.section .description .txt_row .c03 {
+    background: #555;
+}
+
+.section .description .txt_row .c04 {
+    background: #666;
+}
+
+.section .description .txt_row .color .toTop {
     position: fixed;
     inset: auto 50px 50px auto;
     z-index: 999;
 }
+
+.section .description .btn {
+    display: flex;
+    justify-content: left;
+    width: 350px;
+    text-align: center;
+}
+
+.section .description .btn a {
+    display: block;
+    width: 150px;
+    height: 40px;
+    margin: 35px 15px 0 0;
+    background: #fff;
+
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    font-size: 13px;
+    line-height: 40px;
+    font-weight: 500;
+    transition: 0.5s;
+
+}
+
 
 .mopen {
     position: fixed;
@@ -221,7 +328,6 @@
     z-index: 999;
     width: 30px;
     height: 30px;
-    background: #f7f7f7;
 }
 
 .mopen::before,
@@ -229,7 +335,7 @@
     content: "";
     position: absolute;
     height: 2px;
-    background: #333;
+    background: #000;
     transition: 0.3s;
 }
 
@@ -256,7 +362,7 @@
     position: absolute;
     inset: 50% 5px auto 5px;
     height: 2px;
-    background: #333;
+    background: #000;
     transition: 0.3s;
 }
 
