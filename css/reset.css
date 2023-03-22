@@ -23,5 +23,38 @@ body {
 
 img {
     max-width: 100%;
-    vertical-align: 1;
+    vertical-align: middle;
+
+}
+
+.c01 {
+    background: #000;
+}
+
+.c02 {
+    background: #444;
+}
+
+.c03 {
+    background: #555;
+}
+
+.c04 {
+    background: #666;
+}
+
+.c31 {
+    background: #ef426f;
+}
+
+.c32 {
+    background: #171C8F;
+}
+
+.c33 {
+    background: #f7f7f7;
+}
+
+.c34 {
+    background: #33333386;
 }
