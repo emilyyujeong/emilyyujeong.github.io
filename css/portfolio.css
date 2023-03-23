@@ -136,7 +136,7 @@
 
 
 
-
+/* 
 .circle {
     position: absolute;
     top: 100px;
@@ -147,8 +147,17 @@
     animation: turn 5s linear infinite;
     opacity: 0;
 
+} */
+
+.circle {
+    position: fixed;
+    inset: 30% auto auto 80%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
 }
 
+/* 
 .section.on .circle {
     opacity: 1;
     transition: 1s 3s;
@@ -166,10 +175,10 @@
     100% {
         transform: rotate(360deg)
     }
-}
+} */
 
 
-.section01 .bg {
+.section .bg {
     display: block;
     position: absolute;
     top: 10%;
@@ -177,6 +186,7 @@
     z-index: -1;
     font-size: 200px;
     font-weight: 100;
+    color: #ddd;
 
 }
 
@@ -188,7 +198,7 @@
     border: 1px solid #000;
     backdrop-filter: blur(5px);
     border-radius: 20px;
-    padding: 50px 50px;
+    padding: 60px 50px;
 
     opacity: 0;
 }
