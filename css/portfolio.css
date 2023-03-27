@@ -176,47 +176,6 @@
     transition: 1s 3s;
 }
 
-/* 
-.circle {
-    position: absolute;
-    top: 100px;
-    right: 200px;
-    width: 200px;
-    height: 200px;
-    background: url(../images/circletypo.png) no-repeat;
-    animation: turn 5s linear infinite;
-    opacity: 0;
-
-} */
-
-/* .circle {
-    position: fixed;
-    inset: 30% auto auto 80%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    height: 400px;
-} */
-
-/* 
-.section.on .circle {
-    opacity: 1;
-    transition: 1s 3s;
-}
-
-@keyframes turn {
-    0% {
-        transform: rotate(0deg)
-    }
-
-    50% {
-        transform: rotate(180deg)
-    }
-
-    100% {
-        transform: rotate(360deg)
-    }
-} */
-
 @media (max-width: 768px) {
 
     .header {
@@ -289,7 +248,7 @@
 
 .section .description {
     display: block;
-
+    max-width: 500px;
     align-items: start;
     line-height: 30px;
 
@@ -305,7 +264,6 @@
 }
 
 .section .description h2 {
-
     font-size: 35px;
     font-weight: 500;
     margin-bottom: 10px;
@@ -318,7 +276,6 @@
 
 
 .section .description span {
-
     margin-left: 10px;
     font-size: 20px;
     font-weight: 300;
@@ -388,9 +345,9 @@
 
 .section .description .btn {
     display: flex;
-    justify-content: left;
-    width: 350px;
+    justify-content: space-between;
     text-align: center;
+
 }
 
 .section .description .btn a {
@@ -400,6 +357,7 @@
     margin: 35px 15px 0 0;
     background: #fff;
     border: 1px solid #000;
+    border-radius: 30px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
     font-size: 13px;
     line-height: 40px;
