@@ -1,16 +1,14 @@
 .inner {
     display: flex;
     gap: 100px;
-    width: 1600px;
+    width: 1300px;
     margin: 0 auto;
-    min-height: 400px;
 }
 
 .inner>* {
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
 
 }
 
@@ -142,7 +140,7 @@
 .bold {
     font-weight: 800;
     font-size: 130px;
-    text-align: end;
+    text-align: start;
     opacity: 0;
     transform: translate(300px, 0);
 }
@@ -208,15 +206,39 @@
 }
 
 
+
+/* PROJECT SECTION */
+
+
+
 .section .inner {
-    justify-content: space-between;
-    width: 1400px;
-    height: 600px;
+    justify-content: center;
+    gap: 50px;
+    width: 1300px;
+    height: 650px;
     margin: 0 auto;
     border: 1px solid #000;
     border-radius: 40px;
-    padding: 100px 30px;
+    padding: 100px 70px 100px 30px;
     opacity: 0;
+}
+
+.section .content_bg {
+    flex: 7;
+    display: block;
+    z-index: 999;
+    overflow: hidden;
+    background: url(../images/mokup01.png) no-repeat center center/cover;
+    margin: 15px 30px;
+
+}
+
+
+.section.on .content_bg {}
+
+.section.on .inner {
+    opacity: 1;
+    transition: 1s;
 }
 
 .section .bg {
@@ -228,30 +250,41 @@
 
 }
 
-.section.on .inner {
-    opacity: 1;
+
+.section .content {
+
+    position: relative;
+    overflow: hidden;
+    align-items: start;
+
+    margin: 38px 55px;
+    height: 325px;
+    overflow: hidden;
+    top: 0;
+    left: -5px;
+    border-radius: 10px;
+}
+
+
+
+.section .content .case {
+    transform: translate(0, 0);
     transition: 1s;
 }
 
-
-.section .content {
-    height: 400px;
-    overflow: hidden;
-    align-items: start;
-}
-
-.section .content img {
-    height: 350px;
+.section .content:hover .case {
+    transform: translate(0, calc(-100% + 325px));
 }
 
 
 
 .section .description {
+    flex: 3;
     display: block;
     max-width: 500px;
     align-items: start;
     line-height: 30px;
-
+    padding: 40px 0 0 0;
 }
 
 
@@ -321,21 +354,6 @@
     margin: 2px 0 0 0;
 }
 
-.section .description .txt_row .c01 {
-    background: #000;
-}
-
-.section .description .txt_row .c02 {
-    background: #444;
-}
-
-.section .description .txt_row .c03 {
-    background: #555;
-}
-
-.section .description .txt_row .c04 {
-    background: #666;
-}
 
 .section .description .txt_row .color .toTop {
     position: fixed;
@@ -345,7 +363,7 @@
 
 .section .description .btn {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     text-align: center;
 
 }
@@ -366,7 +384,9 @@
 
 }
 
-
+.section03 .description h2 img {
+    width: 100px;
+}
 
 @media (max-width: 768px) {
 
