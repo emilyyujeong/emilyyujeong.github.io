@@ -118,6 +118,14 @@
     height: 100vh;
 }
 
+.cover ul>li a {
+    position: relative;
+}
+
+.cover ul>li:hover a {
+    font-weight: 800;
+}
+
 .container {
     width: 1500px;
     margin: 0 auto;
@@ -199,6 +207,12 @@
         font-size: 45px;
         padding-top: 10px;
     }
+
+
+    .cover {
+        font-size: 20px;
+    }
+
 }
 
 
@@ -262,7 +276,7 @@
 }
 
 
-/* mobile mockup case */
+/* MOBILE MOCKUP CASE */
 
 .section .mo_bg {
     position: absolute;
@@ -483,6 +497,7 @@
         align-items: start;
         line-height: 30px;
         padding: 0 0 0 0;
+        margin: 0 auto;
     }
 
     .section .description h2 img {
@@ -629,13 +644,6 @@
     margin-bottom: 10px;
 }
 
-/* .profile .intro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #fff;
-    transform: rotate(15deg);
-} */
 
 
 .profile .intro,
