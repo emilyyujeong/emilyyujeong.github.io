@@ -50,6 +50,7 @@
 
 .header a {
     border: 1px solid #000;
+
     padding: 10px 10px;
     border-radius: 20px;
 }
@@ -220,16 +221,25 @@
 /* PROJECT SECTION */
 
 
-
 .section .inner {
     justify-content: center;
     gap: 50px;
     width: 1300px;
     height: 650px;
     margin: 0 auto;
-    border: 1px solid #000;
-    border-radius: 40px;
+
+    background-color: #fff;
+    box-shadow: 8px 8px 19px 0px rgba(0, 0, 0, 0.51);
+
+
+    /* backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 20px;
+    box-shadow: 35px 35px 68px 0px rgba(157, 157, 157, 0.5), inset -4px -4px 16px 0px rgba(157, 157, 157, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255); */
+
     padding: 100px 70px 100px 30px;
+
+    border-radius: 20px;
     opacity: 0;
 }
 
@@ -412,14 +422,23 @@
 }
 
 .section .description .btn a {
+    position: relative;
     display: block;
     width: 150px;
     height: 40px;
     margin: 35px 15px 0 0;
-    background: #fff;
-    border: 1px solid #000;
-    border-radius: 30px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    background: inherit;
+    /* border: 1px solid #000;
+    border-radius: 1px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); */
+    border-radius: 10px;
+    transition: all 0.3s;
+    box-shadow:
+        9px 9px 9px rgba(0, 0, 0, 0.06),
+        -9px -9px 9px rgba(255, 255, 255, 0.6),
+        inset 5px 5px 5px rgba(0, 0, 0, 0.07),
+        inset -5px -5px 5px rgba(255, 255, 255, 0.7);
+
     font-size: 13px;
     line-height: 40px;
     font-weight: 500;
@@ -427,13 +446,23 @@
 
 }
 
-.section .description .btn a:hover {
+
+
+.btn a:hover::before {
+    background-color: #4e4e4e;
+    color: #fff;
+    box-shadow:
+        inset 3px 3px 3px rgba(255, 255, 255, 0.35),
+        inset -3px -3px 3px rgba(0, 0, 0, 0.035);
+}
+
+/* .section .description .btn a:hover {
     color: #fff;
     background: #000;
     border: 1px solid #000;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 
-}
+} */
 
 .section03 .description h2 img {
     width: 100px;
@@ -447,10 +476,14 @@
         height: 900px;
         margin: 0 30px;
         border: none;
-        border-radius: 40px;
+        border-radius: none;
         padding: 110px 0 180px 0;
         opacity: 0;
         gap: 10px;
+
+
+        box-shadow: none;
+
     }
 
     .section .content_bg {
@@ -529,6 +562,12 @@
         line-height: 40px;
         font-weight: 500;
         transition: 0.5s;
+
+    }
+
+    .section .description .btn a:hover {
+        background: #000;
+        color: #fff;
 
     }
 
@@ -681,6 +720,7 @@
     inset: auto 50px 50px auto;
     z-index: 999;
     border: 1px solid #000;
+
     padding: 15px 12px;
     border-radius: 50%;
 }
