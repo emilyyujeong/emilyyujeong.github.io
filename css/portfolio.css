@@ -111,10 +111,15 @@
     height: 0;
     overflow: hidden;
     transition: 1s;
+
 }
 
 .cover.on {
     height: 100vh;
+}
+
+.cover ul {
+    padding: 0 12px;
 }
 
 .cover ul>li a {
@@ -223,12 +228,10 @@
     justify-content: center;
     gap: 50px;
     width: 1300px;
-    height: 650px;
+    height: calc(100vh - 320px);
     margin: 0 auto;
 
     background-color: #fff;
-    /* box-shadow: 8px 8px 76px 0px rgba(0, 0, 0, 0.2); */
-
     background: #ffffff;
     box-shadow: 20px 20px 60px #d9d9d9,
         -20px -20px 60px #ffffff;
@@ -422,15 +425,6 @@
     width: 150px;
     height: 40px;
     margin: 35px 15px 0 0;
-    /* background: inherit; */
-    /* border-radius: 10px;
-    transition: all 0.3s;
-    box-shadow:
-        9px 9px 9px rgba(0, 0, 0, 0.06),
-        -9px -9px 9px rgba(255, 255, 255, 0.6),
-        inset 5px 5px 5px rgba(0, 0, 0, 0.07),
-        inset -5px -5px 5px rgba(255, 255, 255, 0.7);
- */
 
     border-radius: 0.5em;
     background: #ffffff;
@@ -448,19 +442,6 @@
 
 }
 
-
-/* 
-.btn a:hover::before {
-    background-color: #4e4e4e;
-    color: #fff;
-    box-shadow:
-        inset 3px 3px 3px rgba(255, 255, 255, 0.35),
-        inset -3px -3px 3px rgba(0, 0, 0, 0.035);
-
-
-
-        
-} */
 
 
 
@@ -502,7 +483,7 @@
     }
 
     .section01 .content_bg {
-        background: url(../images/mo_fg_mockup.png) no-repeat center center/contain;
+        background: url(../images/mo_fgs_mockup.png) no-repeat center center/contain;
 
 
     }
@@ -571,6 +552,17 @@
         line-height: 40px;
         font-weight: 500;
         transition: 0.5s;
+    }
+
+
+    .section .description .txt_row dl,
+    .section .description .txt_row dd {
+        width: auto;
+    }
+
+    .section .description .txt_row dt {
+
+        width: auto;
     }
 
 
@@ -667,11 +659,12 @@
 
 /* SECTION PROFILE  */
 
-.profile {}
+.profile {
+    gap: 30px;
+}
 
 
 .profile h2 {
-
     text-align: center;
     font-size: 30px;
     font-weight: 700;
@@ -687,16 +680,14 @@
 }
 
 
-
 .profile .intro,
 .profile .career,
 .profile .contact {
-
+    padding: 0 30px;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    padding-left: 50px;
     border-radius: 50px;
     margin-bottom: 30px;
 }
@@ -718,17 +709,6 @@
 
 
 
-/* .toTop {
-    position: fixed;
-    inset: auto 50px 50px auto;
-    z-index: 999;
-    padding: 15px 12px;
-
-    font-size: 14px;
-} */
-
-
-
 .toTop {
     position: fixed;
     inset: auto 50px 50px auto;
@@ -742,9 +722,6 @@
     box-shadow: 4px 4px 9px #d9d9d9,
         -4px -4px 9px #ffffff;
 }
-
-.toTop:hover {}
-
 
 @media (max-width: 768px) {
 
@@ -768,6 +745,14 @@
         border: 1px solid #000;
         margin-bottom: 10px;
     }
+
+    .profile .contact {
+        padding: 0 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 }
 
 
