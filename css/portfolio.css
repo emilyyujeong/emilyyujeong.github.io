@@ -330,7 +330,7 @@
 .section .description {
     flex: 3;
     display: block;
-    max-width: 500px;
+    width: 500px;
     align-items: start;
     line-height: 30px;
     padding: 40px 0 0 0;
@@ -368,8 +368,7 @@
 .section .description .txt_row {
 
     border-top: 1px solid #d9d9d9;
-    padding-top: 30px;
-    padding-right: 30px;
+    padding: 30px 30px;
     display: flex;
     justify-content: space-between;
     line-height: 1.8;
@@ -540,8 +539,7 @@
         display: block;
         align-items: start;
         line-height: 30px;
-        padding: 0 0 0 0;
-        margin: 0 auto;
+        width: auto;
     }
 
     .section .description h2 img {
@@ -567,20 +565,14 @@
         height: 40px;
         margin: 35px 15px 0 0;
         background: #fff;
-        border: 1px solid #000;
+        border: 1px solid #b4b4b4;
         box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
         font-size: 13px;
         line-height: 40px;
         font-weight: 500;
         transition: 0.5s;
-
     }
 
-    .section .description .btn a:hover {
-        background: #000;
-        color: #fff;
-
-    }
 
 }
 
