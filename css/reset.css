@@ -27,6 +27,13 @@ img {
 
 }
 
+dl,
+dt,
+dd {
+    padding: 0;
+    margin: 0;
+}
+
 .c01 {
     background: #000;
 }

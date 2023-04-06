@@ -341,7 +341,7 @@
 .mark {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 85%;
     transform: translate(0, -50%);
     font-weight: bold;
     color: white;
@@ -434,9 +434,7 @@
 
 
 
-
-
-
+/* Going Around Circle */
 
 
 
@@ -449,13 +447,14 @@
     background: url(../images/res_circle03.png) no-repeat;
     animation: turn 9s linear infinite;
     opacity: 0;
+    z-index: -1;
 
 }
 
 
 .section.on .circle {
     opacity: 1;
-    transition: 1s .3s;
+    transition: 1s 1s;
 }
 
 @keyframes turn {
@@ -471,8 +470,6 @@
         transform: rotate(360deg)
     }
 }
-
-
 
 
 
@@ -530,18 +527,27 @@
     line-height: 1.8;
 }
 
-.section .description .txt_row dl,
-.section .description .txt_row dd {
+.section .description .txt_row dl {
+
+    display: block;
     width: 500px;
     font-size: 15px;
     font-weight: 300;
+    line-height: 25px;
 }
+
 
 .section .description .txt_row dt {
     float: left;
+    clear: left;
     width: 70px;
     font-size: 15px;
     font-weight: 500;
+}
+
+.section .description .txt_row dd {
+    font-size: 14px;
+
 }
 
 .section .description .txt_row span,
@@ -561,6 +567,7 @@
 
 .section .description .txt_row .desc {
     padding-left: 70px;
+    font-size: 14px;
 }
 
 
@@ -598,8 +605,6 @@
     transition: 0.5s;
 
 }
-
-
 
 
 .section .description .btn a:hover {
@@ -832,8 +837,8 @@
     max-width: 800px;
     margin: 0 auto;
     height: 180px;
-    border: 1px solid #000;
     margin-bottom: 10px;
+
 }
 
 
@@ -844,9 +849,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    border-radius: 50px;
     margin-bottom: 30px;
+
+    box-shadow: 8px 8px 16px #e9e9e9,
+        -8px -8px 16px #ffffff;
+    border-radius: 20px;
+
+    border: 1px solid #ececec;
+
 }
 
 .profile .category {
