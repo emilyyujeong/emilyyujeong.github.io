@@ -1,3 +1,6 @@
+/* Accent Color Option: #f5c000 / #c77a7a /#ff4545/ #478eff */
+
+
 .inner {
     display: flex;
     gap: 100px;
@@ -159,6 +162,70 @@
 }
 
 
+/* spinner */
+
+.spinner {
+    position: absolute;
+    top: 42%;
+    right: 42%;
+    width: 44px;
+    height: 44px;
+    animation: spinner-y0fdc1 2s infinite ease;
+    transform-style: preserve-3d;
+    opacity: 0;
+}
+
+
+.spinner>div {
+    background-color: rgba(0, 77, 255, 0.2);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    border: 2px solid #004dff;
+}
+
+.spinner div:nth-of-type(1) {
+    transform: translateZ(-22px) rotateY(180deg);
+}
+
+.spinner div:nth-of-type(2) {
+    transform: rotateY(-270deg) translateX(50%);
+    transform-origin: top right;
+}
+
+.spinner div:nth-of-type(3) {
+    transform: rotateY(270deg) translateX(-50%);
+    transform-origin: center left;
+}
+
+.spinner div:nth-of-type(4) {
+    transform: rotateX(90deg) translateY(-50%);
+    transform-origin: top center;
+}
+
+.spinner div:nth-of-type(5) {
+    transform: rotateX(-90deg) translateY(50%);
+    transform-origin: bottom center;
+}
+
+.spinner div:nth-of-type(6) {
+    transform: translateZ(22px);
+}
+
+@keyframes spinner-y0fdc1 {
+    0% {
+        transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+    }
+
+    50% {
+        transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+    }
+
+    100% {
+        transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+    }
+}
+
 .scroll {
     position: absolute;
     left: 50%;
@@ -172,11 +239,17 @@
 .section.on .sty {
     transform: translate(0, 0);
     opacity: 1;
-    transition: 1s 1s;
+    transition: 1s .5s;
 }
 
 .section.on .bold {
     transform: translate(0, 0);
+    opacity: 1;
+    transition: 1s 1s;
+}
+
+.section.on .spinner>div,
+.section.on .spinner {
     opacity: 1;
     transition: 1s 2s;
 }
@@ -229,7 +302,6 @@
 
 
 /* PROJECT SECTION */
-/* height:calc(100vh - 250px) */
 
 .section .inner {
     justify-content: center;
@@ -543,6 +615,7 @@
     width: 70px;
     font-size: 15px;
     font-weight: 500;
+
 }
 
 .section .description .txt_row dd {
@@ -604,11 +677,15 @@
     font-weight: 500;
     transition: 0.5s;
 
+
+
 }
 
 
 .section .description .btn a:hover {
     border: 1px solid rgb(189, 189, 189);
+    background: #478eff;
+    color: #fff;
 }
 
 .section .description .btn a:active {
@@ -620,6 +697,8 @@
 .section03 .description h2 img {
     width: 100px;
 }
+
+
 
 @media (max-width: 768px) {
 
@@ -714,6 +793,7 @@
         line-height: 40px;
         font-weight: 500;
         transition: 0.5s;
+        background: #image.png;
     }
 
 
