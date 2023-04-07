@@ -141,7 +141,6 @@
 }
 
 
-
 .sty {
     font-weight: 500;
     font-size: 100px;
@@ -150,8 +149,8 @@
     opacity: 0;
     transform: translate(-300px, 0);
     text-shadow: -1px 0px #000, 0px 1px #000, 1px 0px #000, 0px -1px #000;
+    transition: 1s;
 }
-
 
 .bold {
     font-weight: 800;
@@ -159,6 +158,47 @@
     text-align: start;
     opacity: 0;
     transform: translate(300px, 0);
+    transition: 1s;
+}
+
+.section.on .sty {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition-delay: .5s;
+}
+
+.section.on .bold {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition-delay: 1s;
+}
+
+.section:not(.on) .sty {
+    transform: translate(-300px, 0);
+    opacity: 0;
+}
+
+.section:not(.on) .bold {
+    transform: translate(300px, 0);
+    opacity: 0;
+}
+
+
+
+.scroll {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 10px;
+    opacity: 0;
+}
+
+
+
+.section.on .scroll {
+    bottom: 50px;
+    opacity: 1;
+    transition: 1s 3s;
 }
 
 
@@ -166,13 +206,13 @@
 
 .spinner {
     position: absolute;
-    top: 42%;
+    top: 35%;
     right: 42%;
-    width: 44px;
-    height: 44px;
+    width: 50px;
+    height: 50px;
     animation: spinner-y0fdc1 3s infinite ease;
     transform-style: preserve-3d;
-    opacity: 0;
+
 }
 
 
@@ -181,7 +221,8 @@
     height: 100%;
     position: absolute;
     width: 100%;
-    border: 2px solid #004dff;
+    border: 3px solid #004dff;
+    opacity: 0;
 }
 
 .spinner div:nth-of-type(1) {
@@ -226,39 +267,16 @@
     }
 }
 
-.scroll {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    bottom: 10px;
-    opacity: 0;
-}
 
 
-
-.section.on .sty {
-    transform: translate(0, 0);
-    opacity: 1;
-    transition: 1s .5s;
-}
-
-.section.on .bold {
-    transform: translate(0, 0);
-    opacity: 1;
-    transition: 1s 1s;
-}
-
-.section.on .spinner>div,
-.section.on .spinner {
+.section.on .spinner>div {
     opacity: 1;
     transition: 1s 2s;
 }
 
-.section.on .scroll {
-    bottom: 50px;
-    opacity: 1;
-    transition: 1s 3s;
-}
+
+
+
 
 @media (max-width: 768px) {
 
