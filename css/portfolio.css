@@ -22,6 +22,7 @@
 
 @media (max-width: 768px) {
     .inner {
+        position: static;
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -682,14 +683,13 @@
     .section .inner {
         justify-content: space-between;
         width: auto;
-        height: 970px;
+        height: 900px;
         margin: 0 30px;
         border: none;
         border-radius: none;
         padding: 110px 0 180px 0;
         opacity: 0;
         gap: 10px;
-
 
         box-shadow: none;
 
@@ -699,6 +699,24 @@
         margin: 0 auto;
         width: 300px;
         height: 200px;
+    }
+
+
+    .section .description .txt_row dt {
+        font-size: 12px;
+
+    }
+
+    .section .description .txt_row dd {
+        font-size: 13px;
+        font-weight: 500;
+
+    }
+
+    .section .description .txt_row .desc {
+        padding-left: 70px;
+        font-size: 12px;
+        font-weight: 200;
     }
 
     .section01 .content_bg {
@@ -740,14 +758,20 @@
         align-items: start;
         line-height: 30px;
         width: auto;
+
+
     }
 
     .section .description h2 img {
         width: 85px;
     }
 
-    .section .description span {
+    .section .description h2 {
         font-size: 14px;
+    }
+
+    .section .description span {
+        font-size: 12px;
         font-weight: 300;
     }
 
