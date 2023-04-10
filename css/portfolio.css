@@ -499,6 +499,10 @@
 
 }
 
+.circle_gnu {
+    background: url(../images/gnu_circle.png) no-repeat;
+}
+
 
 .section.on .circle {
     opacity: 1;
@@ -531,6 +535,11 @@
         opacity: 1;
         z-index: 1;
 
+    }
+
+    .circle_gnu {
+        background: url(../images/gnu_circle.png) no-repeat center center/contain;
+        ;
     }
 
 }
@@ -672,7 +681,7 @@
 }
 
 
-.section03 .description h2 img {
+.section05 .description h2 img {
     width: 100px;
 }
 
