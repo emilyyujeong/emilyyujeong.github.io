@@ -25,7 +25,7 @@
         position: static;
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 0px;
         width: auto;
         margin: 0 30px;
     }
@@ -363,6 +363,7 @@
 
 
     .cover {
+        background: rgba(255, 255, 255, 0.938);
         font-size: 20px;
     }
 
@@ -522,11 +523,10 @@
 @media (max-width: 768px) {
     .circle {
         position: absolute;
-        top: -30%;
-        right: 1%;
-        width: 200px;
-        height: 200px;
-        background: url(../images/res_circle03.png) no-repeat;
+        right: 0%;
+        width: 150px;
+        height: 150px;
+        background: url(../images/res_circle03.png) no-repeat center center/contain;
         animation: turn 9s linear infinite;
         opacity: 1;
         z-index: 1;
@@ -680,14 +680,15 @@
 
 @media (max-width: 768px) {
 
+
     .section .inner {
-        justify-content: space-between;
+
         width: auto;
-        height: 900px;
+        height: 100%;
         margin: 0 30px;
         border: none;
         border-radius: none;
-        padding: 110px 0 180px 0;
+        padding: 50px 0 180px 0;
         opacity: 0;
         gap: 10px;
 
@@ -697,46 +698,31 @@
 
     .section .content_bg {
         margin: 0 auto;
-        width: 300px;
-        height: 200px;
-    }
-
-
-    .section .description .txt_row dt {
-        font-size: 12px;
+        width: 250px;
+        min-height: 150px;
+        background-size: contain;
 
     }
 
-    .section .description .txt_row dd {
-        font-size: 13px;
-        font-weight: 500;
-
-    }
-
-    .section .description .txt_row .desc {
-        padding-left: 70px;
-        font-size: 12px;
-        font-weight: 200;
-    }
 
     .section01 .content_bg {
-        background: url(../images/mo_fgs_mockup.png) no-repeat center center/contain;
+        background-image: url(../images/mo_fgs_mockup.png);
 
 
     }
 
     .section02 .content_bg {
-        background: url(../images/mo_creverse_mockup.png) no-repeat center center/contain;
+        background-image: url(../images/mo_creverse_mockup.png);
     }
 
     .section03 .content_bg {
-        background: url(../images/mo_etude_mockup.png) no-repeat center center/contain;
+        background-image: url(../images/mo_etude_mockup.png);
 
     }
 
     .section04 .content_bg {
-        background: url(../images/mo_eggdrop_mockup.png) no-repeat center center/contain;
-
+        background-image: url(../images/mo_eggdrop_mockup.png);
+        min-height: 150px;
     }
 
     .section05 .content_bg {
@@ -759,6 +745,8 @@
         line-height: 30px;
         width: auto;
 
+        padding: 5px 0 0 0;
+        margin-top: 10px;
 
     }
 
@@ -773,6 +761,29 @@
     .section .description span {
         font-size: 12px;
         font-weight: 300;
+    }
+
+
+
+    .section .description .txt_row {
+        padding: 10px 0;
+    }
+
+    .section .description .txt_row dt {
+        font-size: 12px;
+
+    }
+
+    .section .description .txt_row dd {
+        font-size: 13px;
+        font-weight: 500;
+
+    }
+
+    .section .description .txt_row .desc {
+        padding-left: 70px;
+        font-size: 12px;
+        font-weight: 200;
     }
 
     .section .description .btn {
@@ -983,10 +994,10 @@
         margin-bottom: 10px;
     }
 
-    .profile .contact {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .profile .category {
+        flex: 3;
+        margin-left: 20px;
+        font-weight: 700;
     }
 
 }
